@@ -13,7 +13,42 @@
         body.Home::before {
             background-image: url('{{ "/assets/images/coding-bg.gif" | relative_url }}');
         }
+        /* Additional overlay for static bottom gradient */
+        body.Home {
+            position: relative;
+        }
+        body.Home::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                to bottom,
+                rgba(13, 17, 22, 0) 0%,
+                rgba(13, 17, 22, 0.2) 50%,
+                rgba(13, 17, 22, 0.6) 80%,
+                rgba(13, 17, 22, 0.9) 100%
+            );
+            z-index: 1;
+            pointer-events: none;
+        }
+        /* Scroll-based overlay */
+        body.Home .scroll-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #0D1116;
+            opacity: var(--overlay-opacity, 0);
+            z-index: 1;
+            pointer-events: none;
+            transition: opacity 0.15s ease-out;
+        }
     </style>
+    <div class="scroll-overlay"></div>
     {% endif %}
 </head>
 

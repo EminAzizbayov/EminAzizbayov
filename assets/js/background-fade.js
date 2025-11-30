@@ -1,4 +1,4 @@
-// Fade out background GIF as user scrolls toward projects section
+// Smooth fade overlay that covers the GIF as user scrolls (like andrewkdinh.com)
 document.addEventListener('DOMContentLoaded', function() {
   const projectsSection = document.getElementById('projects');
   const body = document.body;
@@ -7,28 +7,27 @@ document.addEventListener('DOMContentLoaded', function() {
     return; // Only run on homepage
   }
   
-  // Get the initial position of the projects section
-  function updateBackgroundOpacity() {
+  function updateOverlayOpacity() {
     const scrollPosition = window.scrollY;
     const projectsOffset = projectsSection.offsetTop;
     const windowHeight = window.innerHeight;
     
-    // Start fading when user scrolls past 30% of the way to projects section
+    // Start fading when user scrolls past 20% of the way to projects section
     // Complete fade when reaching projects section
-    const fadeStart = projectsOffset * 0.3;
+    const fadeStart = projectsOffset * 0.2;
     const fadeEnd = projectsOffset;
     
-    let opacity = 0.3; // Initial opacity
+    let overlayOpacity = 0; // Initial overlay opacity (no overlay at top)
     
     if (scrollPosition >= fadeStart) {
       // Calculate fade progress (0 to 1)
       const fadeProgress = Math.min(1, (scrollPosition - fadeStart) / (fadeEnd - fadeStart));
-      // Fade from 0.3 to 0
-      opacity = 0.3 * (1 - fadeProgress);
+      // Overlay opacity goes from 0 to 1 (fully covering the GIF)
+      overlayOpacity = fadeProgress;
     }
     
-    // Update CSS variable
-    document.documentElement.style.setProperty('--bg-opacity', opacity);
+    // Update CSS variable for overlay opacity
+    document.documentElement.style.setProperty('--overlay-opacity', overlayOpacity);
   }
   
   // Throttle scroll events for better performance
@@ -36,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
   window.addEventListener('scroll', function() {
     if (!ticking) {
       window.requestAnimationFrame(function() {
-        updateBackgroundOpacity();
+        updateOverlayOpacity();
         ticking = false;
       });
       ticking = true;
@@ -44,6 +43,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   
   // Initial call
-  updateBackgroundOpacity();
+  updateOverlayOpacity();
 });
 
