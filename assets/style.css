@@ -1,3 +1,11 @@
+/* Custom Font - Arca Majora 3 */
+@font-face {
+  font-family: 'Arca Majora 3';
+  src: url('/website-portfolio/assets/fonts/ArcaMajora3-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
 body {
   background-color: #0D1116;
   color: #f2f2f2;
@@ -240,7 +248,7 @@ main {
   font-size: 3rem;
   font-weight: 700;
   margin: 0;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Arca Majora 3', sans-serif;
   letter-spacing: 2px;
 }
 
@@ -291,6 +299,7 @@ main {
   line-height: 1.2;
   text-transform: 20px 0;
   text-align: center;
+  font-family: 'Arca Majora 3', sans-serif;
 }
 
 .intro-bold strong {
