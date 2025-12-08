@@ -326,6 +326,47 @@ main {
   .intro-description { font-size: 1rem; }
 }
 
+/* ===== SCROLL INDICATOR ===== */
+.scroll-indicator {
+  text-align: center;
+  margin: 80px 0 60px 0;
+  position: relative;
+  z-index: 10;
+}
+
+.scroll-arrow {
+  width: 60px;
+  height: auto;
+  display: inline-block;
+  opacity: 0.8;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  animation: bounceArrow 2s infinite;
+}
+
+.scroll-arrow:hover {
+  opacity: 1;
+}
+
+@keyframes bounceArrow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+@media (max-width: 768px) {
+  .scroll-indicator {
+    margin: 60px 0 40px 0;
+  }
+  
+  .scroll-arrow {
+    width: 50px;
+  }
+}
+
 /* ===== PROFILE PIC ===== */
 .profile-picture {
   width: 280px;

@@ -14,7 +14,9 @@ class: Home
     <p class="intro-bold">A passionate <strong>coder</strong>, <strong>video editor</strong>, and <strong>learner</strong>.</p>
 </div>
 
-
+<div class="scroll-indicator">
+    <img src="{{ '/assets/images/arrow.gif' | relative_url }}" alt="Scroll down" class="scroll-arrow">
+</div>
 
 <section id="projects">
    <h2>Projects</h2>
