@@ -246,7 +246,7 @@ main {
 /* ===== HERO SECTION ===== */
 .hero-section {
   text-align: center;
-  margin: 80px 0 40px 0;
+  margin: 40px 0 40px 0;
   position: relative;
   z-index: 10;
 }
@@ -259,6 +259,40 @@ main {
   letter-spacing: 2px;
 }
 
+.hero-divider {
+  width: 300px;
+  height: 3px;
+  background-color: #f2f2f2;
+  border: none;
+  margin: 10px auto 3px auto;
+  border-radius: 0;
+  position: relative;
+}
+
+.hero-divider::before,
+.hero-divider::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.hero-divider::before {
+  left: -10px;
+  transform: translateY(-50%);
+  border-width: 6px 10px 6px 0;
+  border-color: transparent #f2f2f2 transparent transparent;
+}
+
+.hero-divider::after {
+  right: -10px;
+  transform: translateY(-50%);
+  border-width: 6px 0 6px 10px;
+  border-color: transparent transparent transparent #f2f2f2;
+}
+
 .hero-intro {
   text-align: center;
   font-size: 1.5rem;
@@ -268,7 +302,7 @@ main {
 
 @media (max-width: 768px) {
   .hero-section {
-    margin: 40px 0 20px 0;
+    margin: 20px 0 20px 0;
   }
   
   .hero-name {
@@ -279,13 +313,29 @@ main {
   .hero-intro {
     font-size: 1.1rem;
   }
+  
+  .hero-divider {
+    width: 250px;
+    height: 2.5px;
+    margin: 8px auto 2px auto;
+  }
+  
+  .hero-divider::before {
+    left: -8px;
+    border-width: 5px 8px 5px 0;
+  }
+  
+  .hero-divider::after {
+    right: -8px;
+    border-width: 5px 0 5px 8px;
+  }
 }
 
 
 .about-text {
   text-align: center;
   max-width: 700px;
-  margin: 60px auto;
+  margin: -15px auto 5px auto;
   padding: 0 20px;
   position: relative;
   z-index: 10;
@@ -293,8 +343,12 @@ main {
 
 @media (max-width: 768px) {
   .about-text {
-    margin: 40px auto;
+    margin: -15px auto 5px auto;
     padding: 0 15px;
+  }
+  
+  .scroll-indicator {
+    margin: 40px 0 40px 0;
   }
 }
 
@@ -311,7 +365,7 @@ main {
 
 .intro-bold strong {
   font-weight: 700;
-  color: #00b3ff;
+  color: #f2f2f2;
 }
 
 .intro-description {
@@ -329,13 +383,13 @@ main {
 /* ===== SCROLL INDICATOR ===== */
 .scroll-indicator {
   text-align: center;
-  margin: 80px 0 60px 0;
+  margin: 185px 0 60px 0;
   position: relative;
   z-index: 10;
 }
 
 .scroll-arrow {
-  width: 60px;
+  width: 70px;
   height: auto;
   display: inline-block;
   opacity: 0.8;
@@ -369,18 +423,19 @@ main {
 
 /* ===== PROFILE PIC ===== */
 .profile-picture {
-  width: 280px;
-  height: 280px;
+  width: 220px;
+  height: 220px;
   border-radius: 50%;
   object-fit: cover;
-  margin: 0 auto 30px auto;
+  margin: 0 auto 25px auto;
   display: block;
 }
 
 @media (max-width: 768px) {
   .profile-picture {
-    width: 200px;
-    height: 200px;
+    width: 160px;
+    height: 160px;
+    margin: 0 auto 20px auto;
   }
 }
 

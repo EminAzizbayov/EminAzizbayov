@@ -7,6 +7,7 @@ class: Home
 <div class="hero-section" id="home">
 <img src="{{ '/assets/images/IMG_0523.png' | relative_url }}" alt="Emin Azizbayov" class="profile-picture">
     <h1 class="hero-name">Emin Azizbayov</h1>
+    <hr class="hero-divider">
 </div>
 
 <div class="about-text">
