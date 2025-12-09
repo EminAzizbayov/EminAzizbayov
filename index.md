@@ -56,17 +56,28 @@ class: Home
             </div>
          </a>
       </div>
+      <div class="project-box">
+         <a href="https://www.youtube.com/watch?v=-umV4pPVPzk" target="_blank" rel="noopener noreferrer" class="project-link">
+            <div class="project-image">
+               <img src="{{ '/assets/images/thumbnail-youtube.jpg' | relative_url }}" alt="Video Editing Project">
+            </div>
+            <div class="project-content">
+               <h3 class="project-title">Video Editing Project</h3>
+               <p class="project-description">Showcasing video editing skills with a video that generated over 650K+ views on YouTube.</p>
+            </div>
+         </a>
+      </div>
    </div>
 </section>
 
 <section id="about">
    <h2>About Me</h2>
    <div class="about-content">
-      <p class="about-intro">Hi, I'm <span class="highlight">Emin</span>, a Computer Science student passionate about <span class="highlight">technology</span>, <span class="highlight">problem-solving</span>, and building real projects. I enjoy developing websites, writing code, and creating polished digital content.</p>
+      <p>Hi, I'm Emin, a Computer Science student passionate about technology, problem-solving, and building real projects. I enjoy developing websites, writing code, and creating polished digital content.</p>
       
-      <p>I'm currently studying at <span class="highlight">ADA University</span> and improving my skills in Python, web development, and information systems. So far, I've completed multiple personal coding projects and constantly challenge myself to learn and grow.</p>
+      <p>I'm currently studying at ADA University and improving my skills in Python, web development, and information systems. So far, I've completed multiple personal coding projects and constantly challenge myself to learn and grow.</p>
       
-      <p class="about-goal">My long-term goal is to build innovative tech products and make a meaningful impact through what I create.</p>
+      <p>My long-term goal is to build innovative tech products and make a meaningful impact through what I create.</p>
    </div>
 </section>
 
