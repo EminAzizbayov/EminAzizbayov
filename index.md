@@ -67,15 +67,26 @@ class: Home
             </div>
          </a>
       </div>
+            <div class="project-box">
+         <a href="{{ 'https://www.youtube.com/watch?v=gusZ3FYWiCw' | relative_url }}" target="_blank" rel="noopener noreferrer" class="project-link">
+            <div class="project-image">
+               <img src="{{ '/assets/images/HourOfCode.png' | relative_url }}" alt="Hour of Code Project">
+            </div>
+            <div class="project-content">
+               <h3 class="project-title">Hour of Code</h3>
+               <p class="project-description">A short description of what this Hour of Code project/certificate represents.</p>
+            </div>
+         </a>
+      </div>
    </div>
 </section>
 
 <section id="about">
    <h2>About Me</h2>
    <div class="about-content">
-      <p>Hi, I'm Emin, a Computer Science student passionate about technology, problem-solving, and building real projects. I enjoy developing websites, writing code, and creating polished digital content.</p>
+      <p>Hi, I'm Emin, a Computer Science student that loves technology and building projects :D. I enjoy developing whatever comes to my mind, writing code, and being beneficial to my community</p>
       
-      <p>I'm currently studying at ADA University and improving my skills in Python, web development, and information systems. So far, I've completed multiple personal coding projects and constantly challenge myself to learn and grow.</p>
+      <p>I'm currently studying at ADA University and improving my skills in Python, Video Editing, and much more. I'm 18 years old and I can speak 4 languages fluently: English, Russian, Azerbaijani and Turkish. I studied for a year in Turkey pursuing a career that I didn't like: Medicine. Thankfully, I'm finally in the place that I always wanted to be. So far, I've completed few personal/contributional coding projects and I constantly challenge myself to learn and grow.</p>
       
       <div class="programming-languages-image">
          <img src="{{ '/assets/images/programming-languages.png' | relative_url }}" alt="Programming Languages">
@@ -94,4 +105,5 @@ class: Home
          </a>
       </div>
    </div>
+   <div class="code-background"></div>
 </section>
