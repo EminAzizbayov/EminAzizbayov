@@ -194,15 +194,15 @@ div[id] {
 }
 
 .logo-img {
-  height: 100px;
+  height: 75px;
   width: auto;
   object-fit: contain;
 }
 
 @media (max-width: 768px) {
   .logo-img {
-    height: 48px;
-    max-width: 110px;
+    height: 42px;
+    max-width: 100px;
     width: auto;
     object-fit: contain;
   }
@@ -862,8 +862,16 @@ section h2 {
   transition: transform 0.3s ease;
 }
 
-.email-link:hover .email-icon {
-  transform: scale(1.2) rotate(10deg);
+.outlook-icon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.email-link:hover .email-icon,
+.email-link:hover .outlook-icon {
+  transform: scale(1.15);
 }
 
 .email-text {
@@ -917,6 +925,11 @@ section h2 {
   
   .email-icon {
     font-size: 1.1rem;
+  }
+  
+  .outlook-icon {
+    width: 22px;
+    height: 22px;
   }
 }
 

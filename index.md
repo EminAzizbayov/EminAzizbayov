@@ -100,7 +100,7 @@ class: Home
       <p class="contact-intro">Got any ideas or just want to say hi?</p>
       <div class="contact-email">
          <a href="mailto:eazizbayov25963@ada.edu.az" class="email-link">
-            <span class="email-icon">✉</span>
+            <img src="{{ '/assets/images/outlooklogo.png' | relative_url }}" alt="Outlook" class="outlook-icon">
             <span class="email-text">eazizbayov25963@ada.edu.az</span>
          </a>
       </div>
